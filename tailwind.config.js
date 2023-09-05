@@ -10,36 +10,27 @@ export default {
           'ra-primary'      : '#5A74FE',
           'ra-primary-hover': '#6C84FF',
 
-          // 50 (5(6)) Shades of Grey
-          'ra-dark'       : '#181818',
+          'ra-white': '#ffffff',
+          
           'ra-black'      : '#111111',
+          'ra-dark'       : '#181818',
           'ra-dark-grey'  : '#1E1E1E',
-          'ra-darker-grey': '#252525',
           'ra-middle-grey': '#333333',
-          'ra-light-grey' : '#999999',
 
-          //statuses
-          'ra-online'  : '#8BC94E', 
-          'ra-offline' : '#8A8A8A',
-          'ra-joining' : '#2B88F5',
-          'ra-queued'  : '#F23F42',
-          'ra-afk'     : '#F0B132',
-          'ra-unstable': '#B072E0',
+          'ra-red': '#F0503A',
+        },
+        light: {
+          'ra-primary'      : '#5A74FE',
+          'ra-primary-hover': '#6C84FF',
 
-          //red
-          'ra-red'      : '#F0503A',
-          'ra-dark-red' : '#C91F1F',
-          'ra-light-red': '#E5484D',
-          'ra-error-red': '#822025',
+          'ra-white': '#000000',
 
-          //activities
-          'ra-team-change'    : '#E2C55D',
-          'ra-contact-receive': '#7C7CCA',
+          'ra-black'      : '#EEEEEE',
+          'ra-dark'       : '#E7E7E7',
+          'ra-dark-grey'  : '#E1E1E1',
+          'ra-middle-grey': '#CCCCCC',
 
-          //other
-          'ra-yellow'     : '#F0CC7F',
-          'ra-blue'       : '#45A5FF',
-          'ra-light-green': '#8BC94E',
+          'ra-red': '#F0503A',
         },
       },
       { cssVariablePrefix: 'rac-' },

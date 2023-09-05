@@ -4,6 +4,7 @@
   defineProps<{
     sections: NavigationsSection[]
   }>();
+
 </script>
 
 <template>
@@ -36,6 +37,7 @@
   @apply p-5;
   @apply bg-ra-dark-grey;
   @apply flex flex-col h-full;
+  @apply border-r border-white/5;
 
   svg {
     @apply fill-white/50;

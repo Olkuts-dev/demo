@@ -18,7 +18,7 @@
 
   const isReady = ref<boolean>(false);
 
-  const side = 2000;
+  const side = 3000;
 
   const _players = ref(playersMock);
 
