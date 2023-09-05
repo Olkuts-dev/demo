@@ -12,6 +12,7 @@
   const navigationSections = computed((): NavigationsSection[] => {
     return [
       {
+        id   : 1,
         items: {
           [Routes.Main]: {
             name: 'Main',
@@ -19,10 +20,14 @@
         },
       },
       {
+        id   : 2,
         name : 'Common',
         items: {
           [Routes.Input]: {
             name: 'TextInput',
+          },
+          [Routes.Button]: {
+            name: 'Button',
           },
         },
       },
