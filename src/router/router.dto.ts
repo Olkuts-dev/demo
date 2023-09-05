@@ -1,14 +1,7 @@
 
-
 export enum Routes {
   Main = 'Main',
   Input = 'Input',
   Button = 'Button',
+  Modal = 'Modal',
 }
-
-export const CourtRouteBuilder = (route: Routes) => {
-
-  return {
-    name: route,
-  };
-};

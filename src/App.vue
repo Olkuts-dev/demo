@@ -5,6 +5,7 @@
   import { NavigationsSection } from '@components/Navigation/navigation.dto';
   import { Routes } from '@/router/router.dto';
   import { computed } from 'vue';
+  import Modal from '@components/Modal.vue';
   onMounted(() => {
     document.documentElement.setAttribute('data-theme', 'dark');
   });
@@ -16,6 +17,7 @@
         items: {
           [Routes.Main]: {
             name: 'Main',
+            // icon:
           },
         },
       },
@@ -25,9 +27,15 @@
         items: {
           [Routes.Input]: {
             name: 'TextInput',
+            // icon:
           },
           [Routes.Button]: {
             name: 'Button',
+            // icon:
+          },
+          [Routes.Modal]: {
+            name: 'Modal',
+            // icon:
           },
         },
       },
@@ -40,6 +48,7 @@
   <div id="app">
     <Navigation :sections="navigationSections" class="navigation" />
     <RouterView class="router" />
+    <Modal />
   </div>
 </template>
 

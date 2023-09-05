@@ -11,7 +11,7 @@ p {
 }
 
 * {
-  font-family: 'Inter' !important;
+  font-family: 'Manrope' !important;
 }
 
 
@@ -29,7 +29,7 @@ p {
  
 ::-webkit-scrollbar-thumb {
   @apply bg-white/25;
-  
+
   &:hover {
     @apply bg-white/50;
   }
