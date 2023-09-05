@@ -14,18 +14,15 @@
     type?: 'text' | 'password' | 'email' | 'number';
     theme?: 'light' | 'middle' | 'default' | 'dark';
     modelValue?: string;
-    height?: string;
     preinput?: string;
     autofocus?: boolean;
     maxLength?: number;
     delay?: number;
   }>();
 
-  const _height = computed(() => Math.max(40, +(props.height ?? '40')));
-
   const slots = useSlots();
 
-  const input = ref<string>(props.preinput ?? '');
+  const input = ref<string>('');
   const exception = ref<string | undefined | null>();
 
   const errorMessage = (value?: string) => {
@@ -75,7 +72,8 @@
   const inputRef = ref<HTMLElement>();
 
   onMounted(() => {
-    
+    input.value = props.preinput ?? '';
+
     if (props.autofocus) {
       inputRef.value?.focus();
     }
@@ -128,30 +126,23 @@
 
 <template>
   <div
-    :class="[
-      'input-container',
-      {
-        'without-effects':  exception,
-        error: exception,
-      },
-    ]"
-    :style="`height: calc(${_height}px + ${label ? '28px' : '0'});`"
+    class="input-container"
+    :class="{
+      'without-effects': exception,
+      error: exception,
+    }"
   >
-    <div v-if="props.label" class="input-label">
+    <div v-if="props.label" class="label">
       <label for="input">
         {{ props.label }}
       </label>
+
       <slot name="action" />
     </div>
 
     <div
-      :style="`height: ${_height}px;`"
-      :class="[
-        'input-box',
-        {
-          slot: slots.leftIcon,
-        },
-      ]"
+      class="input-box"
+      :class="{ slot: slots.default }"
     >
       <div v-if="prepend" class="prepend">
         <p v-if="typeof prepend === 'string'">
@@ -184,7 +175,6 @@
         :placeholder="props.placeholder"
         :class="{
           [getBackground]: true,
-          withoutEffects,
           withRightIcon: !!slots.rightIcon,
         }"
         :type="type"
@@ -201,23 +191,73 @@
 
 <style scoped lang="scss">
 .input-container {
-  &:not(.no-border, .without-effects, .error) {
-    &:focus-within {
-      .prepend,
-      .append,
+  .label {
+    @apply inline-flex justify-between w-full mb-1;
+    @apply text-white/25;
+  }
+
+  .input-box {
+    @apply h-10;
+    @apply w-full;
+    @apply flex items-center;
+
+    &:not(.slot) {
       input {
-        @apply border-white/20;
+        @apply pl-2.5;
+      }
+    }
+    
+    // Правильные бордеры и скругления
+    &:not(:has(.prepend)) {
+      input {
+        @apply rounded-md;
+        @apply border;
+      }
+    }
+    
+    input {
+      @apply border-r rounded-r-md;
+      @apply w-full h-full pr-2.5;
+      @apply text-white;
+
+      // Точно есть бордер по Y, и у него серый цвет
+      @apply border-y border-white/10;
+
+      &::placeholder {
+        @apply text-white/25;
+        font-size: 16px;
+      }
+    }
+
+    .prepend {
+      @apply rounded-l-md;
+      @apply flex items-center justify-center;
+      @apply px-2.5;
+      @apply h-full;
+
+      // Если передадим текст, чтобы он был стандартным
+      @apply font-medium;
+      @apply text-white/50;
+
+      &:not(.slot) {
+        @apply bg-white/10;
+        
+        svg {
+          @apply fill-white/50;
+        }
+
+        // Если иконка - делаем квадратным
+        &:not(:has(p)) {
+          @apply aspect-square;
+        }
       }
 
-      .prepend {
-        &:not(.slot) {
-          @apply bg-white/20;
-          @apply text-white;
+      &.slot {
+        @apply border-l border-y border-white/10;
+      }
 
-          svg {
-            fill: white;
-          }
-        }
+      p {
+        text-wrap: nowrap;
       }
     }
   }
@@ -230,6 +270,7 @@
       .prepend {
         @apply bg-ra-red;
         @apply text-ra-red;
+        
         svg {
           @apply fill-ra-red;
         }
@@ -237,113 +278,25 @@
     }
   }
 
-  &.no-border {
-    input {
-      @apply border-none;
-    }
-
-    .prepend {
-      @apply border-none;
-    }
-
-    .append {
-      @apply border-none;
-    }
-  }
-}
-
-.input-label {
-  @apply inline-flex justify-between w-full mb-1;
-  @apply text-white/25;
-}
-
-.input-box {
-  @apply w-full;
-  @apply flex items-center;
-
-  &:not(.slot) {
-    input {
-      @apply pl-2.5;
-    }
-  }
-
-  // Правильные бордеры и скругления
-  &:not(:has(.prepend)) {
-    input {
-      @apply rounded-l-md;
-      @apply border-l rounded-l-md;
-    }
-  }
-  &:not(:has(.append)) {
-    input {
-      @apply rounded-r-md;
-      @apply border-r rounded-r-md;
-    }
-  }
-
-  .prepend {
-    // Общий мусор
-    @apply rounded-l-md;
-    @apply px-2.5;
-    @apply h-full;
-
-    // Стандартный цвет задника - серый, а цвет свг - светлосерый
-    &:not(.slot) {
-      // Делаем квадратик с иконкой квадратным
-      &:not(:has(p)) {
-        @apply aspect-square;
+  &:not(.error) {
+    &:focus-within {
+      .prepend,
+      input {
+        @apply border-white/20;
       }
 
-      @apply bg-white/10;
-      svg {
-        @apply fill-white/50;
+      .prepend {
+        &:not(.slot) {
+          @apply bg-white/20;
+          @apply text-white;
+
+          svg {
+            @apply fill-white;
+          }
+        }
       }
-    }
-
-    &.slot {
-      @apply border-l border-y border-white/10;
-    }
-
-    // Если вдруг передадим текст, чтобы он был стандартным
-    @apply font-medium;
-    @apply text-white/50;
-
-    // Центруем контент
-    @apply flex items-center justify-center;
-
-    p {
-      text-wrap: nowrap;
-    }
-  }
-
-  input {
-    &::placeholder {
-      @apply text-white/25;
-      font-size: 16px;
-    }
-
-    @apply w-full h-full pr-2.5;
-
-    // Точно есть бордер по Y, и у него серый цвет
-    @apply border-y border-white/10;
-
-    @apply text-white;
-  }
-
-  .append {
-    @apply border-y border-r border-white/10;
-    @apply rounded-r-md;
-    @apply h-full;
-
-    @apply flex items-center gap-0.5;
-    @apply pr-3;
-    @apply text-white;
-
-    .plus {
-      @apply text-ra-light-grey;
-      @apply text-xs;
-      @apply font-medium;
     }
   }
 }
+
 </style>

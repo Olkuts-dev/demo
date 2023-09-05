@@ -33,25 +33,26 @@
 
 <template>
   <div id="app">
-    <div class="flex h-full w-full">
-      <Navigation :sections="navigationSections" class="navigation" />
-      <RouterView class="router" />
-    </div>
+    <Navigation :sections="navigationSections" class="navigation" />
+    <RouterView class="router" />
   </div>
 </template>
 
 <style lang="scss" scoped>
 $navigation-width: 300px;
 
+#app {
+  height: 100vh;
+}
+
 .navigation {
   @apply fixed;
   width: $navigation-width;
 }
 .router {
+  @apply p-5;
   margin-left: $navigation-width;
 }
 
-#app {
-  height: 100vh;
-}
+
 </style>
