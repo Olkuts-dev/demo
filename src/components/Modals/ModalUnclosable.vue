@@ -7,13 +7,13 @@
 
 <template>
   <div class="p-5 w-96">
-    <p class="text-white/75 text-xl text-center pb-5">
+    <p class="text-ra-white/75 text-xl text-center pb-5">
       Hey! It's unclosable. 
     </p>
-    <p class="text-white/75 pb-3">
+    <p class="text-ra-white/75 pb-3">
       It's just can't be close by click outside.
     </p>
-    <p class="text-white/75 pb-10">
+    <p class="text-ra-white/75 pb-10">
       By the way, you still can close it by button 
     </p>
     <div class="flex">

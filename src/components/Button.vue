@@ -87,10 +87,10 @@
     
     &.primary {
       @apply rounded-md;
-      @apply bg-ra-primary text-white;
+      @apply bg-ra-primary text-ra-white;
 
       svg {
-        @apply fill-white;
+        @apply fill-ra-white;
       }
       
       &:hover {
@@ -100,14 +100,14 @@
 
     &.default {
       @apply rounded-md;
-      @apply bg-white/10 text-white/50;
+      @apply bg-ra-white/10 text-ra-white/50;
 
       svg {
-        @apply fill-white/50;
+        @apply fill-ra-white/50;
       }
 
       &:hover {
-        @apply bg-white/20 text-white;
+        @apply bg-ra-white/20 text-ra-white;
       }
     }
 
@@ -127,20 +127,20 @@
     
 
     &.disabled { 
-      @apply text-white/25 border-white/25;
+      @apply text-ra-white/25 border-ra-white/25;
       
       svg {
-        @apply fill-white/25;
+        @apply fill-ra-white/25;
       }
 
       &:not(.link) {
-        @apply bg-white/5;
+        @apply bg-ra-white/5;
       }
     }
   }
 
   .loading-icon {
-    @apply absolute w-5 h-5 animate-spin text-white/25 fill-white;
+    @apply absolute w-5 h-5 animate-spin text-ra-white/25 fill-ra-white;
   }
 }
 </style>

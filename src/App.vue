@@ -111,18 +111,18 @@ $navigation-width: 300px;
     @apply bg-ra-dark-grey;
     @apply sticky top-0;
     @apply p-5;
-    @apply text-white font-bold text-xl;
+    @apply text-ra-white font-bold text-xl;
     @apply flex items-center gap-3;
 
     .divider {
       @apply w-0.5;
       @apply h-6;
-      @apply bg-white/5;
+      @apply bg-ra-white/5;
     }
 
     .icon {
       @apply w-5;
-      @apply fill-white/50;
+      @apply fill-ra-white/50;
       @apply cursor-pointer
     }
   }

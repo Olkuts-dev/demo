@@ -28,9 +28,9 @@ p {
 }
  
 ::-webkit-scrollbar-thumb {
-  @apply bg-white/25;
+  @apply bg-ra-white/25;
 
   &:hover {
-    @apply bg-white/50;
+    @apply bg-ra-white/50;
   }
 }

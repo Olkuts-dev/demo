@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="text-white">
+  <div class="text-ra-white">
     Main
   </div>
 </template>

@@ -82,7 +82,7 @@
     @apply absolute;
     @apply top-1;
     @apply right-2;
-    @apply text-white/30;
+    @apply text-ra-white/30;
     @apply text-xs;
     @apply transition-all;
   }
@@ -91,7 +91,7 @@
   }
   .peer:checked + .peer::after {
     @apply translate-x-10;
-    @apply bg-white;
+    @apply bg-ra-white;
   }
 
   .peer:checked + .peer::before {

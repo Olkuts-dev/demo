@@ -193,7 +193,7 @@
 .input-container {
   .label {
     @apply inline-flex justify-between w-full mb-1;
-    @apply text-white/25;
+    @apply text-ra-white/50;
   }
 
   .input-box {
@@ -218,13 +218,13 @@
     input {
       @apply border-r rounded-r-md;
       @apply w-full h-full pr-2.5;
-      @apply text-white;
+      @apply text-ra-white;
 
       // Точно есть бордер по Y, и у него серый цвет
-      @apply border-y border-white/10;
+      @apply border-y border-ra-white/10;
 
       &::placeholder {
-        @apply text-white/25;
+        @apply text-ra-white/25;
         font-size: 16px;
       }
     }
@@ -237,13 +237,13 @@
 
       // Если передадим текст, чтобы он был стандартным
       @apply font-medium;
-      @apply text-white/50;
+      @apply text-ra-white/50;
 
       &:not(.slot) {
-        @apply bg-white/10;
+        @apply bg-ra-white/10;
         
         svg {
-          @apply fill-white/50;
+          @apply fill-ra-white/50;
         }
 
         // Если иконка - делаем квадратным
@@ -253,7 +253,7 @@
       }
 
       &.slot {
-        @apply border-l border-y border-white/10;
+        @apply border-l border-y border-ra-white/10;
       }
 
       p {
@@ -282,16 +282,16 @@
     &:focus-within {
       .prepend,
       input {
-        @apply border-white/20;
+        @apply border-ra-white/20;
       }
 
       .prepend {
         &:not(.slot) {
-          @apply bg-white/20;
-          @apply text-white;
+          @apply bg-ra-white/20;
+          @apply text-ra-white;
 
           svg {
-            @apply fill-white;
+            @apply fill-ra-white;
           }
         }
       }

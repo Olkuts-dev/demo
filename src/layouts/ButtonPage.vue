@@ -15,7 +15,7 @@
 <template>
   <div class="flex flex-col gap-8">
     <div>
-      <p class="text-white/50 pb-2">
+      <p class="text-ra-white/50 pb-2">
         Just Buttons
       </p>
       <div class="flex">
@@ -41,7 +41,7 @@
     </div>
 
     <div>
-      <p class="text-white/50 pb-2">
+      <p class="text-ra-white/50 pb-2">
         Icon Button
       </p>
       <div class="flex">
@@ -69,7 +69,7 @@
       </div>
     </div>
     <div>
-      <p class="text-white/50 pb-2">
+      <p class="text-ra-white/50 pb-2">
         Button with icon and text
       </p>
       <div class="flex">
@@ -101,7 +101,7 @@
     </div>
     
     <div>
-      <p class="text-white/50 pb-2">
+      <p class="text-ra-white/50 pb-2">
         Button with loading icon while awaiting async action
       </p>
       <div class="flex">

@@ -9,7 +9,7 @@
 
 <template>
   <div class="flex flex-col gap-8">
-    <p class="text-white/50 text-lg">
+    <p class="text-ra-white/80 text-lg">
       There are some inputs with different props
     </p>
 
@@ -19,7 +19,7 @@
         label="With reactive value"
         placeholder="Your text"
       />
-      <p class="text-white/50">
+      <p class="text-ra-white/50">
         <span>Value: </span>  
         <span>{{ input1 }}</span>  
       </p>
@@ -40,7 +40,7 @@
         placeholder="Your text"
         :delay="1500"
       />
-      <p class="text-white/50">
+      <p class="text-ra-white/50">
         <span>Value: </span>  
         <span>{{ input2 }}</span>  
       </p>
@@ -65,7 +65,7 @@
         placeholder="Your text"
         preinput="value"
       >
-        <PlayerIcon class="fill-white/50 w-4" />
+        <PlayerIcon class="fill-ra-white/50 w-4" />
       </TextInput>
     </div>
 

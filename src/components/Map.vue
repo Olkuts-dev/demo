@@ -143,7 +143,7 @@
 
 .leaflet-popup {
   .leaflet-popup-content-wrapper {
-    @apply text-white font-bold;
+    @apply text-ra-white font-bold;
     @apply bg-ra-primary/50;
     backdrop-filter: blur(2px);
   }

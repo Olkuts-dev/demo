@@ -37,14 +37,14 @@
   @apply p-5;
   @apply bg-ra-dark-grey;
   @apply flex flex-col h-full;
-  @apply border-r border-white/5;
+  @apply border-r border-ra-white/5;
 
   svg {
-    @apply fill-white/50;
+    @apply fill-ra-white/50;
   }
 
     .section {
-      @apply text-white/25;
+      @apply text-ra-white/25;
       @apply text-sm;
       @apply my-2;
     }
@@ -56,20 +56,20 @@
   @apply rounded-md;
 
   .text {
-    @apply text-white/50;
+    @apply text-ra-white/50;
     @apply text-lg font-normal;
     @apply leading-none;
   }
 
   &:hover {
-    @apply bg-white/5;
+    @apply bg-ra-white/5;
   }
 
   &.active-link {
     @apply bg-ra-primary;
 
     .text {
-      @apply text-white;
+      @apply text-ra-white;
     }
   }
 }

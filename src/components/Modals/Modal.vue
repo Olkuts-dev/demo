@@ -11,14 +11,14 @@
 
 <template>
   <div class="p-5 w-96">
-    <p class="text-white/75 text-xl text-center pb-5">
+    <p class="text-ra-white/75 text-xl text-center pb-5">
       Hey! That's modal component. 
     </p>
     <template v-if="text === undefined">
-      <p class="text-white/75 pb-3">
+      <p class="text-ra-white/75 pb-3">
         It's closable by click outside end ESC key
       </p>
-      <p class="text-white/75 pb-3">
+      <p class="text-ra-white/75 pb-3">
         Also you can close it by call 
         <span class="text-sky-600 font-semibold">useModalStore</span>
         <span class="font-semibold">().</span>
@@ -36,7 +36,7 @@
       </div>
     </template>
     <template v-else>
-      <p class="text-white/75 pb-3">
+      <p class="text-ra-white/75 pb-3">
         Value:
         <span>
           {{ text }}
