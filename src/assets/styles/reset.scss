@@ -1,0 +1,27 @@
+
+body {
+  line-height: normal;
+  @apply bg-ra-black;
+}
+
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: 'Inter' !important;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}

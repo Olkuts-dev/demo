@@ -1,0 +1,52 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module"
+  },
+  "extends": [
+    "plugin:vue/vue3-recommended"
+  ],
+  "rules": {
+    "no-console": "error",
+    "semi": "error",
+    "vue/no-v-html": "error",
+    "no-unused-vars": "warn",
+    "vue/no-unused-vars": "warn",
+    "key-spacing": ["error", { "align": "colon"}],
+    "no-multi-spaces": ["error", {"exceptions": {"ImportDeclaration": true}}],
+    "no-multiple-empty-lines": "error",
+    "vue/multi-word-component-names": "off",
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": {
+        "max": 2
+      },      
+      "multiline": {
+        "max": 1
+      }
+    }],
+    "vue/script-indent": ["error", 2, {
+      "baseIndent": 1,
+      "switchCase": 1
+    }],
+    "vue/singleline-html-element-content-newline": ["error", {
+      "ignoreWhenNoAttributes": true,
+      "ignoreWhenEmpty": true,
+      "ignores": ["p", "span", "a", "b", "strong"]
+    }],
+    "vue/define-props-declaration": ["error", "type-based"],
+    "vue/new-line-between-multi-line-property": ["error", {
+      "minLineOfMultilineProperty": 2
+    }],
+    "vue/no-required-prop-with-default": ["error", {
+      "autofix": false,
+    }],
+    "vue/padding-line-between-blocks": ["error", "always"],
+    "vue/prefer-true-attribute-shorthand": ["error", "always"],
+    "vue/no-setup-props-reactivity-loss": "error",
+    "vue/no-undef-components": ["error", {
+      "ignorePatterns": ["VDropdown", "VTooltip", "RouterView", "RouterLink"]
+    }]
+  }
+}
