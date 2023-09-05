@@ -120,36 +120,39 @@
   <div id="mapContainer" />
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #mapContainer {
   height: 100%;
   background-color: #111111;
 }
-.leaflet-marker-shadow,
-.leaflet-popup,
-.leaflet-marker-icon {
-  -webkit-transition: all 1s linear;
-  -moz-transition: all 1s linear;
-  -o-transition: all 1s linear;
-  -ms-transition: all 1s linear;
-  transition: all 1s linear;
-}
 
-.avatar {
-  @apply h-full;
-  @apply border-2 border-ra-black;
-  border-radius: 50%;
-}
-
-.leaflet-popup {
-  .leaflet-popup-content-wrapper {
-    @apply text-ra-white font-bold;
-    @apply bg-ra-primary/50;
-    backdrop-filter: blur(2px);
+:deep() {
+  .leaflet-marker-shadow,
+  .leaflet-popup,
+  .leaflet-marker-icon {
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    -ms-transition: all 1s linear;
+    transition: all 1s linear;
   }
-  .leaflet-popup-tip {
-    @apply bg-ra-primary/50;
-    backdrop-filter: blur(2px);
+  
+  .avatar {
+    @apply h-full;
+    @apply border-2 border-ra-black;
+    border-radius: 50%;
+  }
+
+  .leaflet-popup {
+    .leaflet-popup-content-wrapper {
+      @apply text-ra-white font-bold;
+      @apply bg-ra-primary/50;
+      backdrop-filter: blur(2px);
+    }
+    .leaflet-popup-tip {
+      @apply bg-ra-primary/50;
+      backdrop-filter: blur(2px);
+    }
   }
 }
 
