@@ -4,4 +4,5 @@ export enum Routes {
   Input = 'Input',
   Button = 'Button',
   Modal = 'Modal',
+  Map = 'Map'
 }

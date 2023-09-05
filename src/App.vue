@@ -23,7 +23,7 @@
       },
       {
         id   : 2,
-        name : 'Common',
+        name : 'Common Components',
         items: {
           [Routes.Input]: {
             name: 'TextInput',
@@ -35,6 +35,16 @@
           },
           [Routes.Modal]: {
             name: 'Modal',
+            // icon:
+          },
+        },
+      },
+      {
+        id   : 3,
+        name : 'Content Components',
+        items: {
+          [Routes.Map]: {
+            name: 'Map',
             // icon:
           },
         },

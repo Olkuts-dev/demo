@@ -2,6 +2,7 @@ import Main from "@/layouts/Main.vue";
 import InputPage from "@/layouts/InputPage.vue";
 import ButtonPage from "@/layouts/ButtonPage.vue";
 import ModalPage from "@/layouts/ModalPage.vue";
+import MapPage from "@/layouts/MapPage.vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { Routes } from "./router.dto";
 
@@ -28,6 +29,11 @@ export const useRouter = () => {
         path     : '/modal',
         name     : Routes.Modal,
         component: ModalPage
+      },
+      {
+        path     : '/map',
+        name     : Routes.Map,
+        component: MapPage
       },
     ],
   });
