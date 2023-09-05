@@ -11,6 +11,8 @@
   import { useThemeStore } from '@/store/theme';
   import GithubIcon from '@assets/icons/github.svg';
 
+  type AvailableTheme = 'dark' | 'light';
+
   const _theme = useThemeStore();
 
   const navigationSections = computed((): NavigationsSection[] => {
@@ -54,15 +56,20 @@
       },
     ];
   });
+  const value = ref<boolean>(false);
 
   onMounted(() => {
-    _theme.setTheme('dark');
+    const theme = localStorage.getItem('theme') as AvailableTheme;
+    _theme.setTheme(theme);
+    
+    value.value = theme === 'light';
   });
 
-  const isLight = ref<boolean>(_theme.isLight);
 
-  watch(() => isLight.value, () => {
-    _theme.switchTheme();
+  watch(() => value.value, (newValue) => {
+    if (newValue !== null) {
+      _theme.setTheme(newValue ? 'light' : 'dark');
+    }
   });
 
 </script>
@@ -76,7 +83,7 @@
           Header
         </span>
         <Switch
-          v-model="isLight"
+          v-model="value"
           text-on-true="LIGHT"
           text-on-false="DARK"
         />

@@ -87,10 +87,10 @@
     
     &.primary {
       @apply rounded-md;
-      @apply bg-ra-primary text-ra-white;
+      @apply bg-ra-primary text-white;
 
       svg {
-        @apply fill-ra-white;
+        @apply fill-white;
       }
       
       &:hover {

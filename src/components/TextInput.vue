@@ -118,7 +118,7 @@
 
       case 'default':
       default: {
-        return 'bg-black/50';
+        return 'bg-ra-dark/50';
       }
     }
   });

@@ -44,7 +44,7 @@
   }
 
     .section {
-      @apply text-ra-white/25;
+      @apply text-ra-white/30;
       @apply text-sm;
       @apply my-2;
     }
@@ -57,7 +57,7 @@
 
   .text {
     @apply text-ra-white/50;
-    @apply text-lg font-normal;
+    @apply text-lg;
     @apply leading-none;
   }
 

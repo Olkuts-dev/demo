@@ -14,6 +14,7 @@ export default {
           
           'ra-black'      : '#111111',
           'ra-dark'       : '#181818',
+          'ra-grey'       : '#111111',
           'ra-dark-grey'  : '#1E1E1E',
           'ra-middle-grey': '#333333',
 
@@ -25,9 +26,10 @@ export default {
 
           'ra-white': '#000000',
 
-          'ra-black'      : '#EEEEEE',
+          'ra-black'      : '#fcfcfc',
           'ra-dark'       : '#E7E7E7',
-          'ra-dark-grey'  : '#E1E1E1',
+          'ra-grey'       : '#f5f5f5',
+          'ra-dark-grey'  : '#f5f5f5',
           'ra-middle-grey': '#CCCCCC',
 
           'ra-red': '#F0503A',

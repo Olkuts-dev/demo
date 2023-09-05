@@ -76,29 +76,6 @@
         preinput="value"
       />
     </div>
-
-    <div class="flex items-center gap-3">
-      <TextInput
-        label="Theme light"
-        placeholder="Your text"
-        theme="light"
-      />
-      <TextInput
-        label="Theme middle"
-        placeholder="Your text"
-        theme="middle"
-      />
-      <TextInput
-        label="Theme default"
-        placeholder="Your text"
-        theme="default"
-      />
-      <TextInput
-        label="Theme dark"
-        placeholder="Your text"
-        theme="dark"
-      />
-    </div>
     
     <div class="flex items-center gap-3">
       <TextInput

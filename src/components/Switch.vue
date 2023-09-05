@@ -91,7 +91,7 @@
   }
   .peer:checked + .peer::after {
     @apply translate-x-10;
-    @apply bg-ra-white;
+    @apply bg-white;
   }
 
   .peer:checked + .peer::before {
