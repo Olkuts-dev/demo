@@ -86,10 +86,11 @@
   @apply m-auto;
   @apply p-2;
   @apply grid;
-  grid-gap: 20px;
+  grid-gap: 8px;
   
   &.laptop,
   &.desktop {
+    grid-gap: 20px;
     @apply p-5;
     @apply grid grid-cols-2 grid-rows-2;
 

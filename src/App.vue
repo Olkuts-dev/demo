@@ -107,6 +107,7 @@
   height: 100vh;
   
   --navigation-width: 300px;
+  --header-height: 68px;
 
   &.phone {
     --navigation-width: 120px;
@@ -118,9 +119,10 @@
   }
   .page {
     margin-left: var(--navigation-width);
-    @apply h-full;
+    height: calc(100% - var(--header-height));
 
     .header {
+      height: var(--header-height);
       @apply bg-ra-dark-grey;
       @apply sticky top-0;
       @apply z-10;
