@@ -18,24 +18,24 @@
       <p class="text-ra-white/50 pb-2">
         Just Buttons
       </p>
-      <div class="flex">
+      <div class="flex flex-wrap">
         <Button
           :action="() => {}"
           text="Primary"
           preset="primary"
-          class="mr-2"
+          class="mr-2 mt-2"
         />
         <Button
           :action="() => {}"
           text="Default"
           preset="default"
-          class="mr-2"
+          class="mr-2 mt-2"
         />
         <Button
           :action="() => {}"
           text="Link"
           preset="link"
-          class="mr-2"
+          class="mr-2 mt-2"
         />
       </div>
     </div>
@@ -69,15 +69,15 @@
       </div>
     </div>
     <div>
-      <p class="text-ra-white/50 pb-2">
+      <p class="text-ra-white/50 pb-2 ">
         Button with icon and text
       </p>
-      <div class="flex">
+      <div class="flex flex-wrap">
         <Button
           :action="() => {}"
           text="Text with icon"
           preset="primary"
-          class="mr-2"
+          class="mr-2 mt-2"
         >
           <PlayerIcon />
         </Button>
@@ -85,7 +85,7 @@
           :action="() => {}"
           text="Text with icon"
           preset="default"
-          class="mr-2"
+          class="mr-2 mt-2"
         >
           <PlayerIcon />
         </Button>
@@ -93,7 +93,7 @@
           :action="() => {}"
           text="Text with icon"
           preset="link"
-          class="mr-2"
+          class="mr-2 mt-2"
         >
           <PlayerIcon />
         </Button>

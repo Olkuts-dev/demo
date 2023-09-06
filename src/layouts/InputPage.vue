@@ -13,7 +13,7 @@
       There are some inputs with different props
     </p>
 
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-3 flex-wrap">
       <TextInput
         v-model="input1"
         label="With reactive value"
@@ -33,7 +33,7 @@
       />
     </div>
 
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-3 flex-wrap">
       <TextInput
         v-model="input2"
         label="Delay in 1500ms"
@@ -46,7 +46,7 @@
       </p>
     </div>
 
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-3 flex-wrap">
       <TextInput
         label="With prepend as text"
         placeholder="Your text"
@@ -63,20 +63,11 @@
       <TextInput
         label="Slot inside input box"
         placeholder="Your text"
-        preinput="value"
       >
         <PlayerIcon class="fill-ra-white/50 w-4" />
       </TextInput>
     </div>
 
-    <div class="flex items-center gap-3">
-      <TextInput
-        label="Default value"
-        placeholder="Your text"
-        preinput="value"
-      />
-    </div>
-    
     <div class="flex items-center gap-3">
       <TextInput
         label="Default value"

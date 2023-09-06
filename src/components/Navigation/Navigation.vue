@@ -34,7 +34,7 @@
 <style lang='scss' scoped>
 
 .module-navigation {
-  @apply p-5;
+  @apply p-4;
   @apply bg-ra-dark-grey;
   @apply flex flex-col h-full;
   @apply border-r border-ra-white/5;
@@ -47,6 +47,11 @@
       @apply text-ra-white/30;
       @apply text-sm;
       @apply my-2;
+
+      // обрезание
+      @apply whitespace-nowrap;
+      @apply text-ellipsis;
+      @apply overflow-hidden;
     }
 }
 
@@ -57,7 +62,7 @@
 
   .text {
     @apply text-ra-white/50;
-    @apply text-lg;
+    @apply text-base;
     @apply leading-none;
   }
 

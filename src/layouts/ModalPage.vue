@@ -46,7 +46,7 @@
       />
       <Button
         :action="() => openWithProps()"
-        text="Open it with props"
+        text="With props"
         preset="default"
         class="h-10"
       />

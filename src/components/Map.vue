@@ -74,7 +74,7 @@
   const drawMap = () => {
     map = L.map('mapContainer', {
       crs               : L.CRS.Simple,
-      minZoom           : -1,
+      minZoom           : -2,
       maxZoom           : 5,
       layers            : undefined,
       attributionControl: false,
@@ -123,6 +123,7 @@
 <style lang="scss" scoped>
 #mapContainer {
   height: 100%;
+  z-index: 5;
   background-color: #111111;
 }
 

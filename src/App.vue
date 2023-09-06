@@ -7,11 +7,14 @@
   import { computed } from 'vue';
   import Modal from '@components/Modal.vue';
   import Switch from '@components/Switch.vue';
+  import { useMq } from "vue3-mq";
   import { ref } from 'vue';
   import { useThemeStore } from '@/store/theme';
   import GithubIcon from '@assets/icons/github.svg';
 
   type AvailableTheme = 'dark' | 'light';
+
+  const mq = useMq();
 
   const _theme = useThemeStore();
 
@@ -31,7 +34,7 @@
         name : 'Common Components',
         items: {
           [Routes.Input]: {
-            name: 'TextInput',
+            name: 'Input',
             // icon:
           },
           [Routes.Button]: {
@@ -61,7 +64,7 @@
   onMounted(() => {
     const theme = localStorage.getItem('theme') as AvailableTheme;
     _theme.setTheme(theme);
-    
+
     value.value = theme === 'light';
   });
 
@@ -75,7 +78,7 @@
 </script>
 
 <template>
-  <div id="app">
+  <div id="app" :class="mq.current">
     <Navigation :sections="navigationSections" class="navigation" />
     <div class="page">
       <div class="header">
@@ -100,37 +103,42 @@
 </template>
 
 <style lang="scss" scoped>
-$navigation-width: 300px;
-
 #app {
   height: 100vh;
-}
+  
+  --navigation-width: 300px;
 
-.navigation {
-  @apply fixed;
-  width: $navigation-width;
-}
-.page {
-  margin-left: $navigation-width;
-  @apply h-full;
+  &.phone {
+    --navigation-width: 120px;
+  }
 
-  .header {
-    @apply bg-ra-dark-grey;
-    @apply sticky top-0;
-    @apply p-5;
-    @apply text-ra-white font-bold text-xl;
-    @apply flex items-center gap-3;
+  .navigation {
+    @apply fixed;
+    width: var(--navigation-width);
+  }
+  .page {
+    margin-left: var(--navigation-width);
+    @apply h-full;
 
-    .divider {
-      @apply w-0.5;
-      @apply h-6;
-      @apply bg-ra-white/5;
-    }
+    .header {
+      @apply bg-ra-dark-grey;
+      @apply sticky top-0;
+      @apply z-10;
+      @apply p-5;
+      @apply text-ra-white font-bold text-xl;
+      @apply flex items-center gap-3;
 
-    .icon {
-      @apply w-5;
-      @apply fill-ra-white/50;
-      @apply cursor-pointer
+      .divider {
+        @apply w-0.5;
+        @apply h-6;
+        @apply bg-ra-white/5;
+      }
+
+      .icon {
+        @apply w-5;
+        @apply fill-ra-white/50;
+        @apply cursor-pointer
+      }
     }
   }
 }

@@ -6,7 +6,7 @@
 </script>
 
 <template>
-  <div class="p-5 w-96">
+  <div class="p-5 w-80">
     <p class="text-ra-white/75 text-xl text-center pb-5">
       Hey! It's unclosable. 
     </p>

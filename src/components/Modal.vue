@@ -63,7 +63,7 @@
   @apply flex items-center justify-center;
   @apply cursor-pointer;
 
-  z-index: 99999;
+  @apply z-20;
   backdrop-filter: blur(4px);
 }
 
