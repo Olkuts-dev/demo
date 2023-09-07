@@ -82,7 +82,7 @@
     });
 
     const bounds = new L.LatLngBounds([-side / 2, -side / 2], [side / 2, side / 2]);
-    L.imageOverlay('/src/assets/test-map.png', bounds).addTo(map);
+    L.imageOverlay('/assets/test-map.png', bounds).addTo(map);
 
     map.fitBounds(bounds, { animate: false });
   };
