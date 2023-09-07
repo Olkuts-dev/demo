@@ -13,7 +13,7 @@
   <div class="wrapper" :class="mq.current">
     <div class="box general " >
       <div class="mask-avatar">
-        <img src="src/assets/my-photo.jpg">
+        <img src="/my-photo.jpg">
       </div>
       <div class="paragraph">
         <p class="title">

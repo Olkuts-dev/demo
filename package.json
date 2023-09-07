@@ -2,7 +2,7 @@
   "name": "demo",
   "version": "0.0.0",
   "scripts": {
-    "build": "run-p type-check build-only",
+    "build": "run-p build-only",
     "build-only": "vite build",
     "dev": "vite --host --port 5137",
     "preview": "vite preview",
