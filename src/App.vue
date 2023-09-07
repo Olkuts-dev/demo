@@ -62,7 +62,7 @@
   const value = ref<boolean>(false);
 
   onMounted(() => {
-    const theme = localStorage.getItem('theme') as AvailableTheme;
+    const theme = localStorage.getItem('theme') as AvailableTheme ?? 'dark';
     _theme.setTheme(theme);
 
     value.value = theme === 'light';
