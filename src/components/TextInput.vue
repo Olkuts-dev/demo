@@ -197,8 +197,11 @@
   }
 
   .input-box {
+    @apply overflow-hidden;
     @apply h-10;
     @apply w-full;
+
+    @apply border border-ra-white/10 rounded-md;
     @apply flex items-center;
 
     &:not(.slot) {
@@ -207,21 +210,10 @@
       }
     }
     
-    // Правильные бордеры и скругления
-    &:not(:has(.prepend)) {
-      input {
-        @apply rounded-md;
-        @apply border;
-      }
-    }
-    
     input {
-      @apply border-r rounded-r-md;
       @apply w-full h-full pr-2.5;
       @apply text-ra-white;
 
-      // Точно есть бордер по Y, и у него серый цвет
-      @apply border-y border-ra-white/10;
 
       &::placeholder {
         @apply text-ra-white/25;
@@ -230,7 +222,6 @@
     }
 
     .prepend {
-      @apply rounded-l-md;
       @apply flex items-center justify-center;
       @apply px-2.5;
       @apply h-full;
@@ -252,10 +243,6 @@
         }
       }
 
-      &.slot {
-        @apply border-l border-y border-ra-white/10;
-      }
-
       p {
         text-wrap: nowrap;
       }
@@ -264,9 +251,10 @@
 
   &.error {
     input {
-      @apply border-ra-red/50 text-ra-red;
+      @apply text-ra-red;
     }
     .input-box {
+      @apply border-ra-red/50;
       .prepend {
         @apply bg-ra-red;
         @apply text-ra-red;
@@ -280,8 +268,7 @@
 
   &:not(.error) {
     &:focus-within {
-      .prepend,
-      input {
+      .input-box {
         @apply border-ra-white/20;
       }
 
